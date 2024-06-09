@@ -65,7 +65,7 @@ public class PetController {
 		return petRepository.findAll(page);
 	}
 	
-	@GetMapping("/pet/{pag}/20")
+	@GetMapping("/pet/{pag}/5")
 	public Iterable<Pet> showPetsByPage(@PathVariable int pag){
 		PageRequest page = PageRequest.of(pag, 5);
 		return petRepository.findAll(page);
